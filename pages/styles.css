@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+:root {
+    --main-bg-color: #222831;
+    --main-second-color: #FA7E1E;
+    --main-dark-color: #191E25;
+    --elements-bg-color: #393E46;
+    --elements-hover-bg-color: #474b51;
+    --subtitle-color: #9C9EA2;
+    --text-main-color: #909398;
+    --text-main-color-light: #fff;
+    --text-main-color-grey: #BDBEC1;
+    --button-dark-grey-color: #393E46;
+    --button-linkedin-color: #2867B2;
+    --button-fb-color: #3B5998;
+    --button-insta-primary-color: #FA7E1E;
+    --button-insta-secondary-color: #D62976;
+    --button-github-color: #000;
+    --footer-main-color: #383E46;
+    --footer-line-separator-color: #35393F;
+
+    font-size: 80%;
+}
+
+
+html, body, #__next {
+    height: 100vh;
+}
+  
+body {
+    background: var(--main-bg-color);
+}
+
+.bg-wave {
+    background-size: contain !important;
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    top: -10em;
+    z-index: 1 !important;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-container .main-navigator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.app-container .bio-container {
+    margin-top: 12rem;
+    background: var(--elements-bg-color);
+    width: 90%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.app-container .bio-container .user-avatar img {
+    border-radius: 30px;
+    max-width: 15rem;
+    margin-top: -6rem;
+    margin-bottom: 20px;
+}
+
+.app-container .bio-container .user-information {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-container .bio-container .user-information h1 {
+    color: var(--text-main-color-light);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.app-container .bio-container .user-information h3 {
+    color: var(--text-main-color);
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.app-container .bio-container .user-resume {
+    max-width: 83%;
+    text-align: center;
+    color: var(--text-main-color-light);
+    font-size: 1.4em;
+    margin-bottom: 2em;
+}
+
+main {
+    width: 100%;
+}
+
+.group-element {
+    margin-bottom: 65px;
+}
+
+.group-element .group-title {
+    color: var(--text-main-color-light);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 2rem;
+}
+
+.group-element .group-description {
+    text-align: center;
+    font-weight: 500;
+    color: var(--subtitle-color);
+    font-size: 1.4rem;
+    margin-bottom: 1.5em;
+}
+
+.tools-list,
+.repo-list {
+    list-style: none;
+}
+
+.tools-list {
+    display: grid;
+    max-width: 90%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: auto;
+}
+
+.tools-list .tool-element img {
+    margin-right: 10px;
+}
+
+.tools-list .tool-element p {
+    color: var(--text-main-color-light);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.tools-end {
+    margin-top: 2em;
+    font-size: 1.2rem;
+    color: var(--subtitle-color);
+    text-align: center;
+}
+
+.repo-list.x-scroll {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.repo-list.x-scroll::-webkit-scrollbar {
+    width: 0;
+}
+
+.repo-list .repo-element {
+    background: var(--elements-bg-color);
+    min-width: 18rem;
+    max-width: 18rem;
+    height: 18rem;
+    margin-right: 2rem;
+    border-radius: 20px;
+}
+
+.repo-list .repo-element a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    height: 100%;
+}
+
+.repo-list .repo-element .repo-title h1 {
+    color: var(--text-main-color-light);
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 2px;
+}
+
+.repo-list .repo-element .repo-title h3 {
+    color: var(--text-main-color);
+    font-size: 1rem;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.social-buttons button {
+    border-radius: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+    outline: none;
+    border: transparent;
+}
+
+.social-buttons button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 1.2em 0;
+
+    color: var(--text-main-color-light);
+    margin: auto;
+}
+
+.social-buttons button a img {
+    margin-right: 1.3em;
+}
+
+.social-buttons button a p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.social-buttons button.linkedin {
+    background: #2867B2;
+}
+
+.social-buttons button.fb {
+    background: #3B5998;
+}
+
+.social-buttons button.insta {
+    background: linear-gradient(45deg, var(--button-insta-primary-color), var(--button-insta-secondary-color));
+}
+
+footer {
+    background: var(--footer-main-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    text-decoration: none;
+}
+
+footer a p {
+    font-weight: 500;
+    margin-right: 20px;
+    color: var(--text-main-color-light);
+    font-size: 1.4rem;
+}
+
+.d-only {
+    display: none;
+}
+
+@media (min-width: 1100px) {
+    .m-only {
+        display: none;
+    }
+
+    .d-only {
+        display: block;
+    }
+
+    .app-container  {
+        background: var(--main-dark-color);
+    }
+    
+    .app-container .main-navigator {
+        width: 100%;
+        justify-content: space-between;
+        margin: 2em 0;
+        padding: 0 5em;
+    }
+
+    .app-container .main-navigator .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .app-container .main-navigator .nav-list li {
+        color: var(--text-main-color-light);
+        margin-right: 3em;
+        font-size: 1.3em;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .app-container .main-navigator .nav-list li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .app-container .main-navigator .nav-list li:hover span{
+        background: var(--button-dark-grey-color);
+    }
+
+    .app-container .main-navigator .nav-list li .active span {
+        background: var(--main-second-color);
+    }
+
+    .app-container .main-navigator .nav-list li span {
+        width: 2em;
+        height: 5px;
+        margin-top: 3px;
+        margin-bottom: -5px;
+        background: transparent;
+        transition: all .2s ease;
+    }
+
+    .app-container .main-navigator .nav-list li:last-child {
+        margin-right: 0;
+    }
+
+    .app-container .main-navigator .nav-list .resume-button {
+        background: var(--main-second-color);
+        padding: .7em 1.5em;
+        font-size: 1.05em;
+        color: var(--text-main-color-light);
+        cursor: pointer;
+    }
+
+    .app-container .main-navigator .nav-list .resume-button p {
+        font-weight: 600;
+    }
+
+    .app-container .main-navigator .nav-list .resume-button img {
+        margin-right: 10px;
+    }
+
+    .app-container .bio-container {
+        background: transparent;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin: 5em 0 10em 0;
+        padding: 0 5em;
+    }
+
+    .app-container .bio-container .user-avatar {
+        padding-right: 30px;
+    }
+
+    .app-container .bio-container .user-avatar img {
+        position: relative;
+        border-radius: 0;
+        width: 25em;
+        height: 25em;
+        max-width: 25em;
+        margin-top: 0;
+        z-index: 2;
+    }
+
+    .app-container .bio-container .user-avatar .avatar-stroke {
+        z-index: 1;
+        width: 25em;
+        height: 25em;
+        border: solid 5px var(--main-second-color);
+        margin-bottom: -110%;
+        right: -25px;
+        position: relative;
+    }
+
+    .app-container .bio-container .user-information {
+        margin-right: 10em;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .app-container .bio-container .user-information h1 {
+        max-width: 5em;
+        font-size: 4em;
+        line-height: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .app-container .bio-container .user-information h3 {
+        font-weight: 600;
+        font-size: 1.4em;
+    }
+
+    .app-container .bio-container .user-resume {
+        max-width: 100%;
+        text-align: start;
+        font-weight: 400;
+    }
+
+    .app-container .bio-container .social-buttons {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .app-container .bio-container .social-buttons li {
+        margin-right: 2em;
+        background: var(--button-dark-grey-color);
+        border-radius: 10em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5em;
+        height: 5em;
+        cursor: pointer;
+    }
+
+    .app-container .bio-container .social-buttons li a {
+        height: 25px;
+    }
+
+    .app-container .bio-container .social-buttons .github {
+        background: var(--elements-bg-color);
+    }
+
+    .app-container .bio-container .social-buttons .linkedin {
+        background: var(--button-linkedin-color);
+    }
+
+    .app-container .bio-container .social-buttons .fb {
+        background: var(--button-fb-color);
+    }
+
+    .app-container .bio-container .social-buttons .insta {
+        background: var(--button-insta-primary-color);
+    }
+
+    .app-container .group-element {
+        position: relative;
+        margin-top: 10em;
+        margin-bottom: 0;
+    }
+
+    .app-container .group-element .content {
+        padding: 0 5em;
+    }
+
+    .app-container .group-element.stacks {
+        background: var(--main-bg-color);
+    }
+
+    .app-container .group-element.stacks .stacks-wave {
+        background: url("/assets/imgs/second-wave-bg.svg") no-repeat;
+    }
+
+    .app-container .group-element *:not(.stacks-wave),
+    .app-container .group-element *:not(.project-wave) {
+        z-index: 2;
+        position: relative;
+    }
+
+    .app-container .group-element .line-separator {
+        width: 30px;
+        height: 5px;
+        background: var(--main-second-color);
+        margin: auto;
+        margin-bottom: 3em;
+    }
+
+    .app-container .group-element .group-inline {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .app-container .group-element .section-description {
+        color: var(--text-main-color-grey);
+        font-size: 1.3em;
+        font-weight: 400;
+        margin-bottom: 2em;
+    }
+
+    .app-container .group-element .group-content {
+        margin-left: 5em;
+    }
+
+    .app-container .group-element .tools-list {
+        max-width: 100%;
+    }
+
+    .app-container .group-element .tools-end {
+        margin-bottom: 15em;
+    }
+
+    .app-container .group-element.projects {
+        margin-top: 5em;
+    }
+
+    .app-container .group-element.projects .project-wave {
+        background: url("/assets/imgs/primary-wave-bg.svg") no-repeat;
+        top: -10em;
+    }
+
+    .app-container .group-element.projects .section-description {
+        text-align: center;
+    }
+
+    .app-container .group-element.projects .group-content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .app-container .group-element .repo-list.x-scroll {
+        padding: 0;
+    }
+
+    .app-container .group-element .repo-list.x-scroll::-webkit-scrollbar {
+        max-height: 8px;
+        margin-top: 10px;
+    }
+
+    .app-container .group-element .repo-list.x-scroll::-webkit-scrollbar-thumb {
+        background: var(--main-second-color);
+        border-radius: 5px;
+    }
+
+    .app-container .group-element .repo-list .repo-element {
+        height: 28em;
+        margin-bottom: 20px;
+        transition: all ease .2s;
+    }
+
+    .app-container .group-element .repo-list .repo-element:hover {
+        background: var(--elements-hover-bg-color);
+    }
+
+    .app-container .group-element .repo-list .repo-title h3 {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+
+    .app-container .group-element .repo-list .repo-title p {
+        color: var(--text-main-color-light);
+        font-weight: 400;
+        font-size: 1.1em;
+    }
+
+    footer {
+        padding: 0 5em;
+        background: transparent;
+        border-radius: 0;
+        margin: 8em 0 5em 0;
+    }
+
+    footer .line-separator {
+        width: 100%;
+        height: 3px;
+        background: var(--footer-line-separator-color);
+        margin-bottom: 2em;
+    }
+
+    footer .project-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .project-info .texts h1 {
+        color: var(--text-main-color-light);
+        font-weight: 500;
+    }
+
+    footer .project-info .texts p {
+        max-width: 70%;
+        color: var(--text-main-color-grey);
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+
+    footer .project-info .texts p strong {
+        font-weight: 600;
+    }
+
+    footer .github-button {
+        background: var(--button-github-color) !important;
+        padding: 15px 40px !important;
+        border-radius: 100px !important;
+    }
+
+    footer .github-button a {
+        padding: 0;
+    }
+
+    footer .github-button p {
+        margin: 0 0 0 15px;
+        white-space: pre;
+        color: var(--text-main-color-light);
+    }
+
+    #to-top-button {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding: 1.4em 1.2em;
+        margin: 1.5em;
+        background: var(--main-second-color);
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 3;
+        display: none;
+    }
+
+    #to-top-button.active {
+        display: block;
+    }
+}
