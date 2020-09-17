@@ -251,14 +251,14 @@ const LandingPage = () => {
           </div>
 
           <StackButton className="github-button">
-            <a href="#">
+            <a href="https://github.com/eljonathas/portfy" target="_blank">
               <img src="/assets/icons/github-icon.svg" alt="Github"/>
               <p>Ir para o Github</p>
             </a>
           </StackButton>
         </div>
 
-        <a href="#" className="m-only">
+        <a href="https://github.com/eljonathas/portfy" target="_blank" className="m-only">
           <p>Veja este projeto no Github</p>
           <img src="/assets/icons/arrow-icon.svg" alt="Arrow"/>
         </a>
