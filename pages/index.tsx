@@ -9,7 +9,6 @@ import api from '../services/api';
 import { RepoData } from '../interfaces';
 
 import iconsMap from '../utils/icons_map';
-import toolsMap from '../utils/tools_map';
 import StackButton from '../components/stackButton';
 
 const LandingPage = () => {
@@ -45,7 +44,7 @@ const LandingPage = () => {
         <img src="/assets/imgs/portfy-logo.svg" alt="Portfy" className="portfy-logo"/>
 
         <ul className="nav-list d-only">
-          <li className="nav-element" to-element="top">
+          <li className="nav-element">
             <Link
               to="top"
               activeClass="active"
@@ -161,8 +160,8 @@ const LandingPage = () => {
                   {
                     userInformation.stacks.map((stack: string, index: number) => (
                       <StackButton key={index} className="tool-element">
-                        <img src={ iconsMap[stack] } alt={ toolsMap[stack] }/>
-                        <p>{ toolsMap[stack] }</p>
+                        <img src={ iconsMap[stack].icon } alt={ iconsMap[stack].name }/>
+                        <p>{ iconsMap[stack].name }</p>
                       </StackButton>
                     ))
                   }
@@ -188,7 +187,7 @@ const LandingPage = () => {
 
                 <ul className="repo-list x-scroll">
                   {
-                    userRepos && userRepos.map((repo: RepoData) => (
+                    userRepos.length ? userRepos.map((repo: RepoData) => (
                       <li key={repo.id} className="repo-element">
                         <a href={repo.svn_url} target="_blank">
                           <div className="repo-title">
@@ -197,10 +196,20 @@ const LandingPage = () => {
                             <p className="d-only">{ repo.description }</p>
                           </div>
 
-                          <img src={ iconsMap[repo.language && repo.language.toLowerCase()] } alt={ repo.language } className="repo-language"/>
+                          <img src={ iconsMap[repo.language ? repo.language.toLowerCase() : 'none'].icon} alt={ repo.language } className="repo-language"/>
                         </a>
                       </li>
-                    ))
+                    )) : (
+                      <>
+                      <li className="repo-element loading"></li>
+                      <li className="repo-element loading"></li>
+                      <li className="repo-element loading"></li>
+                      <li className="repo-element loading"></li>
+                      <li className="repo-element loading"></li>
+                      <li className="repo-element loading"></li>
+                      <li className="repo-element loading"></li>
+                      </>
+                    )
                   }
                 </ul>
               </section>

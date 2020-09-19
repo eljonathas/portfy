@@ -6,43 +6,37 @@
 
 export type UserInfo = {
   github: {
-    user: string;
-    url: string;
+    user: string
+    url: string
   }
   info: {
-    role: string;
-    bio: string;
-    short_bio: string;
-    name: string;
-    avatar: string;
-    curriculum: string;
+    role: string
+    bio: string
+    short_bio: string
+    name: string
+    avatar: string
+    curriculum: string
   }
-  stacks: string[];
+  stacks: string[]
   social: {
-    fb: string;
-    insta: string;
-    linkedin: string;
+    fb: string
+    insta: string
+    linkedin: string
   }
 }
 
 export type IconsMap = {
-  javascript: string;
-  typescript: string;
-  nextjs: string;
-  reactjs: string;
-  react_native: string;
-  nodejs: string;
-  mongodb: string;
-  socketio: string;
-  css: string;
-  [key: string]: string;
+  [key: string]: {
+    icon: string
+    name: string
+  }
 }
 
 export type RepoData = {
-  id: number;
-  name: string;
-  full_name: string;
-  language: string;
-  svn_url: string;
-  description: string;
+  id: number
+  name: string
+  full_name: string
+  language: string
+  svn_url: string
+  description: string
 }

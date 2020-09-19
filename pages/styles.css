@@ -27,7 +27,7 @@
     --footer-main-color: #383E46;
     --footer-line-separator-color: #35393F;
 
-    font-size: 80%;
+    font-size: 75% !important;
 }
 
 
@@ -201,7 +201,7 @@ main {
 
 .repo-list .repo-element .repo-title h3 {
     color: var(--text-main-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .social-buttons {
@@ -279,6 +279,10 @@ footer a p {
 }
 
 @media (min-width: 1100px) {
+    :root {
+        font-size: 80% !important;
+    }
+
     .m-only {
         display: none;
     }
@@ -618,7 +622,7 @@ footer a p {
         position: fixed;
         right: 0;
         bottom: 0;
-        padding: 1.4em 1.2em;
+        padding: 1.2em 1em;
         margin: 1.5em;
         background: var(--main-second-color);
         border-radius: 5px;
