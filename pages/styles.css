@@ -338,6 +338,7 @@ footer a p {
         margin-bottom: -5px;
         background: transparent;
         transition: all .2s ease;
+        border-radius: 20px;
     }
 
     .app-container .main-navigator .nav-list li:last-child {
@@ -486,6 +487,7 @@ footer a p {
         background: var(--main-second-color);
         margin: auto;
         margin-bottom: 3em;
+        border-radius: 20px;
     }
 
     .app-container .group-element .group-inline {
