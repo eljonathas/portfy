@@ -33,7 +33,8 @@ const UserInformation: UserInfo = {
     social: {
         fb: 'https://www.facebook.com/thmrss/',
         insta: 'https://www.instagram.com/andrade.exe/',
-        linkedin: 'https://www.linkedin.com/in/eljonathas'
+        linkedin: 'https://www.linkedin.com/in/eljonathas',
+        email: 'Jonathas.andrade5@gmail.com'
     }
 }
 

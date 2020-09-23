@@ -22,6 +22,7 @@ export type UserInfo = {
     fb: string
     insta: string
     linkedin: string
+    email: string
   }
 }
 

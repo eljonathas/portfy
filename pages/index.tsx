@@ -136,6 +136,12 @@ const LandingPage = () => {
                 <img src="/assets/icons/insta-icon.svg" alt="Instagram"/>
               </a>
             </li>
+
+            <li className="email">
+              <a href={`mailto:${userInformation.social.email}`}>
+                <img src="/assets/icons/mail-icon.svg" alt="E-mail"/>
+              </a>
+            </li>
           </ul>
         </div>
       </header>
@@ -241,6 +247,13 @@ const LandingPage = () => {
                 <a target="_blank" href={ userInformation.social.insta }>
                   <img src="/assets/icons/insta-icon.svg" alt="Instagram"/>
                   <p>Contatar via Instagram</p>
+                </a>
+              </button>
+
+              <button className="email">
+                <a href={`mailto:${userInformation.social.email}`}>
+                  <img src="/assets/icons/mail-icon.svg" alt="E-mail"/>
+                  <p>Contatar via E-mail</p>
                 </a>
               </button>
             </div>

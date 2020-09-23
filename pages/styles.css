@@ -23,6 +23,7 @@
     --button-fb-color: #3B5998;
     --button-insta-primary-color: #FA7E1E;
     --button-insta-secondary-color: #D62976;
+    --button-gmail-color: #d44638;
     --button-github-color: #000;
     --footer-main-color: #383E46;
     --footer-line-separator-color: #35393F;
@@ -192,6 +193,10 @@ main {
     height: 100%;
 }
 
+.repo-list .repo-element .repo-title *:not(.d-only){
+    line-break: anywhere;
+}
+
 .repo-list .repo-element .repo-title h1 {
     color: var(--text-main-color-light);
     font-weight: bold;
@@ -241,16 +246,21 @@ main {
 }
 
 .social-buttons button.linkedin {
-    background: #2867B2;
+    background: var(--button-linkedin-color);
 }
 
 .social-buttons button.fb {
-    background: #3B5998;
+    background: var(--button-fb-color);
 }
 
 .social-buttons button.insta {
     background: linear-gradient(45deg, var(--button-insta-primary-color), var(--button-insta-secondary-color));
 }
+
+.social-buttons button.email {
+    background: var(--button-gmail-color);
+}
+
 
 footer {
     background: var(--footer-main-color);
@@ -455,6 +465,10 @@ footer a p {
 
     .app-container .bio-container .social-buttons .insta {
         background: var(--button-insta-primary-color);
+    }
+
+    .app-container .bio-container .social-buttons .email {
+        background: var(--button-gmail-color);
     }
 
     .app-container .group-element {
