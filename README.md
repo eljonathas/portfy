@@ -17,7 +17,7 @@ npm install
 _Check if you have Nodejs installed on your device._
 
 ## How to set informations 🔧
-In `user_information.ts` localized in **configs dir** on project directory, you can set your personal informations like biography, avatar image, social links and more. This is a template configuration file, and his is necessary to define project informations.
+In `user_information.ts` localized in **configs dir** on project directory, you can set your personal informations like biography, avatar image, social links and more. This is a template configuration file, and he is necessary to define project informations.
 
 ## To finish it 🙇
 Portfy is a **open source** project to personal use, but you are free to modify these application. So, i hope you enjoy this and fork or like the repository if you liked this project. 
