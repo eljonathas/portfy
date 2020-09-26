@@ -3,7 +3,7 @@
 </p>
 
 # How it works? 😁
-**Portfy** is as portfólio Next.js application created by Jonathas Andrade to facilitate developers life or inspirate then to make your personal website. 
+**Portfy** is as portfólio Next.js application created by **Jonathas Andrade** to facilitate developers life or inspirate then to make your personal website. 
 
 ## Get started 🚀
 If you want test or use this project in your personal machine, clone this repository utilizing Git command:
@@ -14,7 +14,7 @@ cd portfy
 npm install
 ```
 
-_Check if you have Nodejs installed on your device._
+_Check if you have NodeJS and Git installed in your device._
 
 ## How to set informations 🔧
 In `user_information.ts` localized in **configs dir** on project directory, you can set your personal informations like biography, avatar image, social links and more. This is a template configuration file, and he is necessary to define project informations.
