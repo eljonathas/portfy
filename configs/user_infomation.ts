@@ -37,7 +37,8 @@ const UserInformation: UserInfo = {
         insta: 'https://www.instagram.com/andrade.exe/',
         linkedin: 'https://www.linkedin.com/in/eljonathas',
         email: 'Jonathas.andrade5@gmail.com'
-    }
+    },
+    analyticsID: 'UA-107769128-2'
 }
 
 export default UserInformation

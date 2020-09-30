@@ -24,6 +24,7 @@ export type UserInfo = {
     linkedin: string
     email: string
   }
+  analyticsID: string
 }
 
 export type IconsMap = {
