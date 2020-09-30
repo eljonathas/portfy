@@ -28,7 +28,9 @@ const UserInformation: UserInfo = {
         'nextjs',
         'nodejs',
         'mongodb',
-        'socketio'
+        'socketio',
+        'mysql',
+        'php'
     ],
     social: {
         fb: 'https://www.facebook.com/thmrss/',

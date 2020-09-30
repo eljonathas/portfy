@@ -37,7 +37,14 @@ const iconsMap: IconsMap = {
         icon: '/assets/icons/css-icon.svg',
         name: 'CSS'
     },
-
+    php: {
+        icon: '/assets/icons/php-icon.svg',
+        name: 'PHP'
+    },
+    mysql: {
+        icon: '/assets/icons/mysql-icon.svg',
+        name: 'MySQL'
+    },
     /**
      * this object is @necessary to adjust undefined repository's type
      * please, do not remove
