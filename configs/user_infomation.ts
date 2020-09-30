@@ -42,7 +42,7 @@ const UserInformation: UserInfo = {
      * parse your Google Analytics ID if you want to do data monitor or
      * remove @ReactGA from index.tsx 
      */
-    analyticsID: ''
+    analyticsID: 'UA-107769128-2'
 }
 
 export default UserInformation
