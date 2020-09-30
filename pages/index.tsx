@@ -23,8 +23,8 @@ const LandingPage = () => {
     
     window.addEventListener('scroll', handleScrollListen);
 
-    ReactGA.initialize(userInformation.analyticsID);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    // ReactGA.initialize(userInformation.analyticsID);
+    // ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   function handleScrollListen () {
