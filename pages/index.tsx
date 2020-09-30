@@ -3,6 +3,8 @@ import Head from 'next/head';
 import { AxiosResponse } from 'axios';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
+import ReactGA from 'react-ga';
+
 import userInformation from '../configs/user_infomation'
 import api from '../services/api';
 
@@ -19,7 +21,10 @@ const LandingPage = () => {
       setUserRepos(response.data)
     });
     
-    window.addEventListener('scroll', handleScrollListen)
+    window.addEventListener('scroll', handleScrollListen);
+
+    ReactGA.initialize('UA-107769128-2');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   function handleScrollListen () {
