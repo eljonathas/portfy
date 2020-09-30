@@ -38,6 +38,10 @@ const UserInformation: UserInfo = {
         linkedin: 'https://www.linkedin.com/in/eljonathas',
         email: 'Jonathas.andrade5@gmail.com'
     },
+    /**
+     * parse your Google Analytics ID if you want to do data monitor or
+     * remove @ReactGA from index.tsx 
+     */
     analyticsID: 'UA-107769128-2'
 }
 
