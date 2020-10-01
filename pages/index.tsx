@@ -1,26 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { AxiosResponse } from 'axios';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 import ReactGA from 'react-ga';
 
 import userInformation from '../configs/user_infomation'
-import api from '../services/api';
 
 import { RepoData } from '../interfaces';
 
 import iconsMap from '../utils/icons_map';
 import StackButton from '../components/stackButton';
 
-const LandingPage = () => {
-  const [ userRepos, setUserRepos ] = useState([]);
+const LandingPage: React.FC<any> = ({ userRepos }) => {
 
   useEffect(() => {
-    api.get(`users/${userInformation.github.user}/repos`).then((response: AxiosResponse) => {
-      setUserRepos(response.data)
-    });
-    
     window.addEventListener('scroll', handleScrollListen);
 
     ReactGA.initialize(userInformation.analyticsID);
@@ -43,6 +37,14 @@ const LandingPage = () => {
         <title>{ userInformation.info.name } - Portfólio</title>
         <link rel="shortcut icon" href="/assets/imgs/favicon.png" type="image/x-icon" />
         <link rel="icon" href="/assets/imgs/favicon.png" type="image/x-icon" />
+        <meta property="og:url" content="https://jonathasandrade.info" />
+        <meta property="og:title" content={`${userInformation.info.name} - Portfólio`} />
+        <meta property="og:site_name" content="Portfy"/>
+        <meta property="og:description" content={userInformation.info.short_bio} />
+        <meta property="og:image" content={userInformation.info.avatar}/>
+        <meta property="og:image:type" content="image/jpeg"/>
+        <meta property="og:image:width" content="500"/>
+        <meta property="og:image:height" content="500"/>
       </Head>
 
       <nav id="top" className="main-navigator">
@@ -299,3 +301,15 @@ const LandingPage = () => {
 }
 
 export default LandingPage
+
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await fetch(`https://api.github.com/users/${userInformation.github.user}/repos`)
+  const data = await response.json()
+
+  return {
+    props: {
+      userRepos: data
+    },
+    revalidate: 20
+  }
+}
