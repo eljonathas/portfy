@@ -37,6 +37,8 @@ const LandingPage: React.FC<any> = ({ userRepos }) => {
         <title>{ userInformation.info.name } - Portfólio</title>
         <link rel="shortcut icon" href="/assets/imgs/favicon.png" type="image/x-icon" />
         <link rel="icon" href="/assets/imgs/favicon.png" type="image/x-icon" />
+        <meta name="title" content={`Portfólio de ${ userInformation.info.name }`} />
+        <meta name="description" content={userInformation.info.short_bio}/>
         <meta property="og:url" content="https://jonathasandrade.info" />
         <meta property="og:title" content={`${userInformation.info.name} - Portfólio`} />
         <meta property="og:site_name" content="Portfy"/>
@@ -91,7 +93,7 @@ const LandingPage: React.FC<any> = ({ userRepos }) => {
             </Link>
           </li>
           <li className="nav-element">
-            <a href={ userInformation.info.curriculum } target="_blank">
+            <a href={ userInformation.info.curriculum } target="_blank" rel="noopener norefer">
               <StackButton className="resume-button">
                 <img src="/assets/icons/doc-icon.svg" alt="Document Icon"/>
                 <p>VER RESUMO</p>
@@ -121,25 +123,25 @@ const LandingPage: React.FC<any> = ({ userRepos }) => {
 
           <ul className="social-buttons d-only">
             <li className="github">
-              <a href={userInformation.github.url} target="_blank">
+              <a href={userInformation.github.url} target="_blank" rel="noopener norefer">
                 <img src="/assets/icons/github-icon.svg" alt="Github"/>
               </a>
             </li>
 
             <li className="linkedin">
-              <a href={userInformation.social.linkedin} target="_blank">
+              <a href={userInformation.social.linkedin} target="_blank" rel="noopener norefer">
                 <img src="/assets/icons/linkedin-icon.svg" alt="Linkedin"/>
               </a>
             </li>
 
             <li className="fb">
-              <a href={userInformation.social.fb} target="_blank">
+              <a href={userInformation.social.fb} target="_blank" rel="noopener norefer">
                 <img src="/assets/icons/fb-icon.svg" alt="Facebook"/>
               </a>
             </li>
 
             <li className="insta">
-              <a href={userInformation.social.insta} target="_blank">
+              <a href={userInformation.social.insta} target="_blank" rel="noopener norefer">
                 <img src="/assets/icons/insta-icon.svg" alt="Instagram"/>
               </a>
             </li>
@@ -202,7 +204,7 @@ const LandingPage: React.FC<any> = ({ userRepos }) => {
                   {
                     userRepos.length ? userRepos.map((repo: RepoData) => (
                       <li key={repo.id} className="repo-element">
-                        <a href={repo.svn_url} target="_blank">
+                        <a href={repo.svn_url} target="_blank" rel="noopener norefer">
                           <div className="repo-title">
                             <h1>{ repo.name }</h1>
                             <h3>{ repo.full_name }</h3>
@@ -237,28 +239,28 @@ const LandingPage: React.FC<any> = ({ userRepos }) => {
           <section className="group-content">
             <div className="social-buttons">
               <button className="linkedin">
-                <a target="_blank" href={ userInformation.social.linkedin }>
+                <a target="_blank" href={ userInformation.social.linkedin } rel="noopener norefer">
                   <img src="/assets/icons/linkedin-icon.svg" alt="Linkedin"/>
                   <p>Contatar via Linkedin</p>
                 </a>
               </button>
 
               <button className="fb">
-                <a target="_blank" href={ userInformation.social.fb }>
+                <a target="_blank" href={ userInformation.social.fb } rel="noopener norefer">
                   <img src="/assets/icons/fb-icon.svg" alt="Facebook"/>
                   <p>Contatar via Facebook</p>
                 </a>
               </button>
 
               <button className="insta">
-                <a target="_blank" href={ userInformation.social.insta }>
+                <a target="_blank" href={ userInformation.social.insta } rel="noopener norefer">
                   <img src="/assets/icons/insta-icon.svg" alt="Instagram"/>
                   <p>Contatar via Instagram</p>
                 </a>
               </button>
 
               <button className="email">
-                <a href={`mailto:${userInformation.social.email}`}>
+                <a href={`mailto:${userInformation.social.email}`} rel="noopener norefer">
                   <img src="/assets/icons/mail-icon.svg" alt="E-mail"/>
                   <p>Contatar via E-mail</p>
                 </a>
@@ -280,14 +282,14 @@ const LandingPage: React.FC<any> = ({ userRepos }) => {
           </div>
 
           <StackButton className="github-button">
-            <a href="https://github.com/eljonathas/portfy" target="_blank">
+            <a href="https://github.com/eljonathas/portfy" target="_blank" rel="noopener norefer">
               <img src="/assets/icons/github-icon.svg" alt="Github"/>
               <p>Ir para o Github</p>
             </a>
           </StackButton>
         </div>
 
-        <a href="https://github.com/eljonathas/portfy" target="_blank" className="m-only">
+        <a href="https://github.com/eljonathas/portfy" target="_blank" className="m-only" rel="noopener norefer">
           <p>Veja este projeto no Github</p>
           <img src="/assets/icons/arrow-icon.svg" alt="Arrow"/>
         </a>

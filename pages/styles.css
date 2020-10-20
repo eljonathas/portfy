@@ -361,6 +361,7 @@ footer a p {
         font-size: 1.05em;
         color: var(--text-main-color-light);
         cursor: pointer;
+        border-radius: 50px;
     }
 
     .app-container .main-navigator .nav-list .resume-button p {
