@@ -211,7 +211,12 @@ const LandingPage: React.FC<any> = ({ userRepos }) => {
                             <p className="d-only">{ repo.description }</p>
                           </div>
 
-                          <img src={ iconsMap[repo.language ? repo.language.toLowerCase() : 'none'].icon} alt={ repo.language } className="repo-language"/>
+                          { 
+                            iconsMap[repo.language ? repo.language.toLowerCase() : 'none'] ? (
+                              <img src={ iconsMap[repo.language ? repo.language.toLowerCase() : 'none'].icon} alt={ repo.language } className="repo-language"/>
+                            ) : ''
+                          }
+
                         </a>
                       </li>
                     )) : (
